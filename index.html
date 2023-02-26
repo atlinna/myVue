@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="test">
+      this is {{name}} 's {{ obj.n }} myVue
+      <p>{{ des }}</p>
+    </div>
+    <script type="module" async>
+      import MyVue from "./core/index.js";
+      window.myVue = new MyVue({
+        el: "test",
+        data: {
+          name: "lucas",
+          des: "can you see it?",
+          obj: {
+            n: 1,
+          },
+          list: [1, 2, 3],
+          news: [{ a: 1, b: 2 }],
+        },
+      });
+    </script>
+  </body>
+</html>
